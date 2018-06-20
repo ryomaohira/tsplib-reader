@@ -11,5 +11,5 @@ A small class for reading TSPLIB files.
 ## Cities
 Each city in the 'cities' list have the following key-value pairs:  
 **index**: the id of the city. This can be used to encode the problem set into an integer based genotype.  
-**x**: the x position in a euclidean space
-**y**: the y position in a euclidean space
+**x**: the x position in a euclidean space  
+**y**: the y position in a euclidean space  
