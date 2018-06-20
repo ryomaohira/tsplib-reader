@@ -6,9 +6,7 @@ A small class for reading TSPLIB files.
 Name: stored name of the TSPLIB problem<br/>
 
 Dimensions: the number of cities contained within the problem (n size)  
-
 Optimum: TSPLIB problems modified with an "OPTIMUM" key-value pair will have the optimum solution stored here.  
-
 Cities: a list containing the cities  
 
 ## Cities
