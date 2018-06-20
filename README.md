@@ -3,7 +3,7 @@ A small class for reading TSPLIB files.
 
 
 ## Member Variables
-Name: stored name of the TSPLIB problem  
+Name: stored name of the TSPLIB problem<br/>
 
 Dimensions: the number of cities contained within the problem (n size)  
 
