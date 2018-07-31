@@ -14,6 +14,7 @@ class reader:
             content = f.read().splitlines()
             cleaned = [x.lstrip() for x in content if x != ""]
             return cleaned
+        del file[:]
             
     def open(self, file):
         arr = self.readFile(file)
@@ -26,8 +27,8 @@ class reader:
             # Get the name
             if "NAME" in item:
                 #self.name = str(item[5:])
-                pre, space, name = item.split(' ')
-                self.name = name
+                #pre, space, name = item.split(' ')
+                self.name = item.split(' ')[-1]
             
             # Get the optimum distance
             if "OPTIMUM" in item:
@@ -42,9 +43,14 @@ class reader:
                     row = item.split(' ')
                     if row[0] not in cities_set:
                         cities_set.append(row[0])
-                        city = {
-                            'index': int(row[0]),
-                            'x': float(row[1]),
-                            'y': float(row[2])
-                        }
+                        if(len(row) > 1):
+                            city = {
+                                'index': int(row[0]),
+                                'x': float(row[1]),
+                                'y': float(row[2])
+                            }
+                        else:
+                            city = {
+                                'index': int(row[0])
+                            }
                         self.cities.append(city)
